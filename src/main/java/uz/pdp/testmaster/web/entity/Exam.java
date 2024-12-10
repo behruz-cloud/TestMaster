@@ -20,5 +20,5 @@ public class Exam extends BaseEntity {
     private Integer moduleNumber;
     private LocalDate date;
     private LocalTime startTime;
-    private Integer examTime;
+    private LocalTime endTime;
 }

@@ -19,4 +19,14 @@ public class GroupRepo{
             throw new RuntimeException(e);
         }
     }
+    public static Groups getById(Integer groupId) {
+        try (
+                EntityManager em = EMF.createEntityManager();
+
+        ) {
+            return em.find(Groups.class, groupId);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
