@@ -3,11 +3,10 @@
     import jakarta.persistence.EntityManager;
     import jakarta.persistence.Query;
     import uz.pdp.testmaster.web.entity.Exam;
-    import uz.pdp.testmaster.web.entity.Groups;
 
     import java.util.List;
 
-    import static uz.pdp.testmaster.web.util.MyListener.EMF;
+    import static uz.pdp.testmaster.util.MyListener.EMF;
 
     public class ExamRepo {
         public static void save(Exam exam) {

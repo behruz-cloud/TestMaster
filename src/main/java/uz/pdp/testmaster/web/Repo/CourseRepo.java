@@ -2,14 +2,12 @@ package uz.pdp.testmaster.web.Repo;
 
 import jakarta.persistence.EntityManager;
 import uz.pdp.testmaster.web.entity.Course;
-import uz.pdp.testmaster.web.entity.Groups;
-import uz.pdp.testmaster.web.util.MyListener;
 
 import javax.servlet.http.HttpServlet;
 
 import java.util.List;
 
-import static uz.pdp.testmaster.web.util.MyListener.EMF;
+import static uz.pdp.testmaster.util.MyListener.EMF;
 
 
 public class CourseRepo extends HttpServlet {

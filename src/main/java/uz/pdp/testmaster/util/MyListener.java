@@ -1,4 +1,4 @@
-package uz.pdp.testmaster.web.util;
+package uz.pdp.testmaster.util;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

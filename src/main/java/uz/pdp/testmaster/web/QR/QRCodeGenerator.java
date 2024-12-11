@@ -31,7 +31,7 @@ public class QRCodeGenerator extends HttpServlet {
         }
 
         // Telegram bot URL va examId parametrini qo'shamiz
-        String qrContent = "https://t.me/@behruz_payment_bot?start=" + examId;  // Telegram bot URL + examId
+        String qrContent = "https://t.me/behruz_payment_bot?start=" + examId;  // Telegram bot URL + examId
 
         int width = 300;  // QR kodning kengligi
         int height = 300;  // QR kodning balandligi
@@ -45,7 +45,7 @@ public class QRCodeGenerator extends HttpServlet {
             OutputStream os = resp.getOutputStream();
             javax.imageio.ImageIO.write(qrImage, "PNG", os);
             os.close();
-
+            resp.sendRedirect("/start");
         } catch (Exception e) {
             resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error generating QR code.");
             e.printStackTrace();
