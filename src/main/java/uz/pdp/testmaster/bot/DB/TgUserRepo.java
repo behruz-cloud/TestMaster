@@ -72,4 +72,33 @@ public class TgUserRepo {
             e.printStackTrace();
         }
     }
+
+    public static void savePhoneNumber(String fixPhoneNumber, TgUser user) {
+        try (
+                Connection connection = DBConfig.getConnection()
+        ) {
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "update tguser set phonenumber = ? where chatid = ?");
+            preparedStatement.setString(1, fixPhoneNumber);
+            preparedStatement.setObject(2, user.getChatId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveExam(TgUser tgUser) {
+        try (
+                Connection connection = DBConfig.getConnection()
+        ) {
+            Integer examId = tgUser.getExamId();
+            PreparedStatement preparedStatement = connection.prepareStatement(
+                    "update tguser set examId = ? where chatid = ?");
+            preparedStatement.setString(1, examId.toString());
+            preparedStatement.setObject(2, tgUser.getChatId());
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

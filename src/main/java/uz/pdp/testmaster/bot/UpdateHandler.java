@@ -1,11 +1,13 @@
 package uz.pdp.testmaster.bot;
 import com.pengrad.telegrambot.model.Update;
+import lombok.SneakyThrows;
 import uz.pdp.testmaster.bot.DB.TgUserRepo;
 import uz.pdp.testmaster.bot.entity.TgUser;
 import uz.pdp.testmaster.bot.factory.Command;
 import uz.pdp.testmaster.bot.factory.CommandFactory;
 import java.util.Optional;
 public class UpdateHandler {
+    @SneakyThrows
     public static void handle(Update update) {
 
         if (update.message() != null) {

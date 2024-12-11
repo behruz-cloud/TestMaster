@@ -22,6 +22,12 @@ public class TgUser {
     private String fullName;
     @Getter
     private State state = State.START;
+    @Setter
+    @Getter
+    private String phoneNumber;
+    @Setter
+    @Getter
+    private Integer examId;
 @Setter
 @Getter
     private String temp_category_name;

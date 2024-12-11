@@ -3,5 +3,5 @@ import com.pengrad.telegrambot.model.Update;
 import uz.pdp.testmaster.bot.entity.TgUser;
 
 public interface Command {
-    void execute(Update update, TgUser tgUser);
+    void execute(Update update, TgUser tgUser) throws InterruptedException;
 }
