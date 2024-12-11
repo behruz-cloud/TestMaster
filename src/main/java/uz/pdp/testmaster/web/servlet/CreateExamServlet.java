@@ -1,5 +1,10 @@
 package uz.pdp.testmaster.web.servlet;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import uz.pdp.testmaster.web.Repo.CourseRepo;
 import uz.pdp.testmaster.web.Repo.ExamRepo;
 import uz.pdp.testmaster.web.Repo.GroupRepo;
@@ -7,11 +12,6 @@ import uz.pdp.testmaster.web.entity.Course;
 import uz.pdp.testmaster.web.entity.Exam;
 import uz.pdp.testmaster.web.entity.Groups;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;

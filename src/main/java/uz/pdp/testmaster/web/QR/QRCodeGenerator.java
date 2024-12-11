@@ -4,14 +4,14 @@ import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.common.BitMatrix;
-import uz.pdp.testmaster.web.Repo.ExamRepo;
-import uz.pdp.testmaster.web.entity.Exam;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import uz.pdp.testmaster.web.Repo.ExamRepo;
+import uz.pdp.testmaster.web.entity.Exam;
+
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;

@@ -1,11 +1,11 @@
-package uz.pdp.testmaster.util;
+package uz.pdp.testmaster.web.util;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
+
 
 @WebListener
 public class MyListener implements ServletContextListener {

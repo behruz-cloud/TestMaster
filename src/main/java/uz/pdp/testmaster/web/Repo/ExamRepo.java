@@ -6,7 +6,7 @@
 
     import java.util.List;
 
-    import static uz.pdp.testmaster.util.MyListener.EMF;
+    import static uz.pdp.testmaster.web.util.MyListener.EMF;
 
     public class ExamRepo {
         public static void save(Exam exam) {
