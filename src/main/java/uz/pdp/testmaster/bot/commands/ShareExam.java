@@ -18,7 +18,7 @@ public class ShareExam implements Command {
                     tgUser.getFullName() + " javoblaringiz qabul qilindi✅"
             );
             SendMessage sendMessage1 = new SendMessage(tgUser.getChatId(),
-                    "Yangi imtihon uchun sizga berilgan QR-kodni skanerlang !"
+                    "Yangi imtihon uchun sizga berilgan QR-kodni skanerlang \uD83D\uDCF2 !"
             );
             InlineKeyboardMarkup inlineKeyboardMarkup = new InlineKeyboardMarkup();
             inlineKeyboardMarkup.addRow(new InlineKeyboardButton("YANGI IMTIHON").callbackData("exam"));

@@ -1,15 +1,12 @@
 package uz.pdp.testmaster.bot.commands;
-
 import com.pengrad.telegrambot.model.Update;
+import com.pengrad.telegrambot.model.request.ReplyKeyboardRemove;
 import com.pengrad.telegrambot.request.SendMessage;
-import lombok.Setter;
 import uz.pdp.testmaster.bot.DB.TgUserRepo;
-import uz.pdp.testmaster.bot.Main;
 import uz.pdp.testmaster.bot.entity.State;
 import uz.pdp.testmaster.bot.entity.TgUser;
 import uz.pdp.testmaster.bot.factory.Command;
 import uz.pdp.testmaster.bot.util.FixNumber;
-
 import static uz.pdp.testmaster.bot.Main.telegramBot;
 
 public class SelectOption implements Command {
@@ -20,7 +17,7 @@ public class SelectOption implements Command {
         TgUserRepo.savePhoneNumber(fixPhoneNumber, user);
         SendMessage sendMessage = new SendMessage(user.getChatId(),
                 "Telefon raqamingiz muvaffaqiyatli saqlandi✅"
-        );
+        ).replyMarkup(new ReplyKeyboardRemove());
         SendMessage sendMessage1 = new SendMessage(user.getChatId(),
                 "Hurmatli " + user.getFullName() + " !\n" +
                         "Imtihon javoblarini topshiringiz mumkin !\n\n" +
